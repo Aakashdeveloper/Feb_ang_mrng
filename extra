@@ -28,6 +28,8 @@ https://code.visualstudio.com/
 # Command for angular App
 // npm install -g @angular/cli
 // ng new firstapp
+// cd firstapp
+// npm start
 // http://localhost:4200/
 
 
