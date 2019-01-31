@@ -1,0 +1,35 @@
+framework
+open source
+npm=> node package manager
+
+package.json
+javascript object notation
+[
+    {
+        name:"a",
+        class:"b"
+    },
+    {
+        name:"c",
+        class:"b
+    }
+]
+
+https://nodejs.org/en/
+https://github.com/
+https://git-scm.com/downloads
+https://code.visualstudio.com/
+
+# command for package json
+// npm init
+// npm install --save zone.js
+
+
+# Command for angular App
+// npm install -g @angular/cli
+// ng new firstapp
+// http://localhost:4200/
+
+
+https://github.com/Aakashdeveloper
+https://github.com/Aakashdeveloper/Feb_ang_mrng

@@ -1,0 +1,19 @@
+{
+  "name": "angapp",
+  "version": "1.0.0",
+  "description": "this is dummy ang app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "node"
+  ],
+  "author": "nareshit",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "zone.js": "^0.8.29"
+  }
+}
