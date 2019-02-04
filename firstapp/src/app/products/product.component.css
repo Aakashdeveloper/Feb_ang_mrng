@@ -1,0 +1,15 @@
+@media(max-width:768){
+  .mydesign{
+
+  }
+}
+
+@media(max-width:768){
+    .mydesign{
+  
+    }
+  }
+
+.alert-success{
+    color:white !important
+}

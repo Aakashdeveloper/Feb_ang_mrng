@@ -35,3 +35,32 @@ https://code.visualstudio.com/
 
 https://github.com/Aakashdeveloper
 https://github.com/Aakashdeveloper/Feb_ang_mrng
+
+
+
+tslint: it makr standard of code
+tsconfig: .ts=> .js
+
+package.json=> angular.json=> main.ts=> app.module.ts
+
+
+
+module=> declarations         NgModule
+Component=> html, css & logics     Component
+Pipe=> run time data change
+Service=> help to connect with 3rd party
+Routing
+
+
+https://www.w3schools.com/booTsTrap/default.asp
+
+/////////////
+table
+alert
+button
+glyphicons
+panels
+navbar
+input
+media object
+modal
