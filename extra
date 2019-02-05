@@ -64,3 +64,136 @@ navbar
 input
 media object
 modal
+
+<h2>~~Products Page~~</h2>
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-6">
+            <input/>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+            <input/>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+            <input/>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+            <input/>
+    </div>
+    <div>
+        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-danger">Rest</button>
+        <button class="btn btn-warning">Test Data</button>
+        <button class="btn btn-info">Submit</button>
+        <button class="btn btn-primary">Rest</button>
+        <button class="btn btn-link">Test Data</button>
+        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-danger">Rest</button>
+        <button class="btn btn-warning">Test Data</button>
+        <button class="btn btn-info">Submit</button>
+        <button class="btn btn-primary">Rest</button>
+        <button class="btn btn-link">Test Data</button>
+    </div>
+    <div class="alert alert-success">
+        Form Submitted
+    </div>
+    
+</div>
+
+
+/////////////
+databinding
+
+one way  binding
+--Data binding  {{}}
+--Property binding []
+--Event Binding ()
+two way  binding [()]
+
+
+//
+string = ""
+number  = 989
+boolean = true / false
+any[]
+
+typeof(a)
+"string"
+typeof(b)
+"number"
+typeof(c)
+"boolean"
+
+var a = [1,2,4,"vfd","bv","br",true,3,5,"cb",true]
+
+//////
+json
+[
+    {
+        name:"a",
+        class:"b"
+    },
+    {
+        name:"c",
+        class:"d"
+    }
+]
+///////API/////
+https://ngmusicdb.herokuapp.com/api/getMusic
+https://ngmovies.herokuapp.com/api/getMovies
+https://ngproductsparam.herokuapp.com/api/getProductDetails
+
+https://github.com/Aakashdeveloper/public-apis
+
+/////
+var a = [1,2,3,4,5]
+undefined
+a[0]
+1
+a[2]
+3
+for(i=0;i<a.length;i++){ console.log(a[i])
+                       }
+VM1692:1 1
+VM1692:1 2
+VM1692:1 3
+VM1692:1 4
+VM1692:1 5
+
+//////
+var a = 10
+undefined
+a
+10
+var a  = 20
+undefined
+a
+20
+let b = 10
+undefined
+b
+10
+
+let b = 20
+VM1772:1 Uncaught SyntaxError: Identifier 'b' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM1772:1
+b = 20
+20
+b
+20
+
+const c = 10
+undefined
+c
+10
+const c = 11
+VM1820:1 Uncaught SyntaxError: Identifier 'c' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM1820:1
+c = 11
+VM1831:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:3
+
+////
+*ngFor
+*ngIf
