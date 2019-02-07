@@ -45,9 +45,9 @@ package.json=> angular.json=> main.ts=> app.module.ts
 
 
 
-module=> declarations         NgModule
-Component=> html, css & logics     Component
-Pipe=> run time data change
+module=> declarations             => NgModule
+Component=> html, css & logics    => Component
+Pipe=> run time data change       => Pipe, PipeTransform
 Service=> help to connect with 3rd party
 Routing
 
@@ -249,3 +249,16 @@ r == "john" ? "hii" : "i dont know you"
 "hii"
 r == "john1" ? "hii" : "i dont know you"
 "i dont know you"
+
+
+/////pipes///
+uppercase
+lowercase
+titlecase
+currency
+date
+percentage
+
+
+https://www.w3schools.com/jsref/jsref_map.asp
+https://www.w3schools.com/jsref/jsref_filter.asp

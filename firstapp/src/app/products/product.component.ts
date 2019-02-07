@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ProductComponent {
     title: String = '~~Product List~~';
     filterText: String  = 'Number Of Product Filter:';
+    filterData: String =  'leaf';
     showImage: Boolean = false;
     products: any[] = [
 
