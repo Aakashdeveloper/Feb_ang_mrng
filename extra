@@ -262,3 +262,20 @@ percentage
 
 https://www.w3schools.com/jsref/jsref_map.asp
 https://www.w3schools.com/jsref/jsref_filter.asp
+
+
+function add(a,b){
+    return a+b
+}
+
+const add = (a,b) => {
+    return a+b
+}
+
+
+//
+model
+css
+rating
+//
+passing data from one component to other

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform} from '@angular/core';
 })
 
 export class DiscountPipe implements PipeTransform {
-    transform(value: Number) {
+    transform(value: number) {
         value = value - 5;
         return value;
     }

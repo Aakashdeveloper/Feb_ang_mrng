@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './products/product.component';
 import { MyUpperPipe } from './products/myUpper.pipe';
 import { DiscountPipe } from './products/discount.pipe';
+import { ProductSearch } from './products/product-filter.pipe';
 
 @NgModule({
     // all component & pipe
@@ -13,7 +14,8 @@ import { DiscountPipe } from './products/discount.pipe';
         AppComponent,
         ProductComponent,
         MyUpperPipe,
-        DiscountPipe
+        DiscountPipe,
+        ProductSearch
     ],
 
     // all the module
