@@ -8,9 +8,9 @@ export class ProductSearch implements PipeTransform {
     transform(value: any[], userInput: String) {
         userInput = userInput ? userInput.toLowerCase() : null;
 
-        return userInput ? value.filter(( product ) => (
-            (product.productCode.toLowerCase().indexOf(userInput) !== -1) ||
-            (product.productName.toLowerCase().indexOf(userInput) !== -1)
+        return userInput ? value.filter(( data ) => (
+            (data.productCode.toLowerCase().indexOf(userInput) !== -1) ||
+            (data.productName.toLowerCase().indexOf(userInput) !== -1)
          )) : value;
     }
 }
