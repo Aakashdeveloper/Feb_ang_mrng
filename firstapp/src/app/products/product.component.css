@@ -1,15 +1,10 @@
-@media(max-width:768){
-  .mydesign{
 
-  }
+thead{color:blueviolet;
+    font-size:20px}
+h4{color:hotpink}
+.rowtag{
+  color:brown
 }
-
-@media(max-width:768){
-    .mydesign{
-  
-    }
-  }
-
-.alert-success{
-    color:white !important
+.price{
+  color:#fff
 }

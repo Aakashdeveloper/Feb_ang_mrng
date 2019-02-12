@@ -279,3 +279,15 @@ css
 rating
 //
 passing data from one component to other
+
+//
+1) style inside ts
+2) style for each component
+3) global style
+4) inline css
+dynamic css
+conditional css
+
+4>1>2>3
+
+

@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
+    // attribute
+    // selector: '[app-product]',
+    // class
+    // selector: '.app-product',
     selector: 'app-product',
-    templateUrl: './product.component.html'
+    templateUrl: './product.component.html',
+    // styles: ['thead{color:teal;font-size:20px}','h4{color:tomato}'],
+    styleUrls: ['./product.component.css' ]
 })
 
 export class ProductComponent {
@@ -10,6 +16,7 @@ export class ProductComponent {
     filterText: String  = 'Number Of Product Filter:';
     filterData: String;
     showImage: Boolean = false;
+    imageWidth: Number = 100;
     products: any[] = [
 
         {    '_id': '5a05dacc734d1d68d42d31f3',

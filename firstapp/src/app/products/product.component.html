@@ -35,12 +35,24 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let prod of products | searchFilter:filterData">
-                              <td> <img [src]="prod.imageUrl" *ngIf="showImage"/></td>
-                              <td>{{prod.productName | myUpper:"upper"}}</td>
+                          <tr *ngFor="let prod of products | searchFilter:filterData"
+                        class="rowtag"
+                               style="color:firebrick">
+                              <td> <img 
+                                        [src]="prod.imageUrl" 
+                                        *ngIf="showImage"
+                                        [style.width.px]="imageWidth"
+                                    />
+                              </td>
+                              <td >
+                                      {{prod.productName | myUpper:"upper"}}
+                              </td>
                               <td>{{prod.productCode | myUpper:"lower"}}</td>
                               <td>{{prod.releaseDate | date | uppercase}}</td>
-                              <td>{{prod.price | discount | currency:"GBP" }}</td>
+                              <td class="price"
+                                 [ngStyle]="{'background-color':prod.price<20?'teal':'#CC00F5'}">
+                                      {{prod.price | discount | currency:"GBP" }}
+                             </td>
                               <td>
                                       <app-star></app-star>
                               </td>
