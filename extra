@@ -291,3 +291,22 @@ conditional css
 4>1>2>3
 
 
+////////////////
+input parameters acts like a Property
+output parameters acts like a Event
+
+
+
+function add(a,b){
+    return a+b
+}
+
+var sum = add(1,2)
+
+var a = 10
+var b = 'my age is ' + a
+var c = `my age is ${a}`
+
+//////
+output
+services
