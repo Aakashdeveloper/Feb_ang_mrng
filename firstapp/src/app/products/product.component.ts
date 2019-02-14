@@ -8,7 +8,12 @@ import { Component } from '@angular/core';
     selector: 'app-product',
     templateUrl: './product.component.html',
     // styles: ['thead{color:teal;font-size:20px}','h4{color:tomato}'],
-    styleUrls: ['./product.component.css' ]
+    styleUrls: ['./product.component.css' ],
+    styles: [
+        `.online{
+            background-color:wheat
+        }`
+    ]
 })
 
 export class ProductComponent {
@@ -17,6 +22,14 @@ export class ProductComponent {
     filterData: String;
     showImage: Boolean = false;
     imageWidth: Number = 100;
+    emitValue: String;
+    updatedValue = '';
+    serverStatus: String = 'offline';
+
+    constructor() {
+        this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
+    }
+
     products: any[] = [
 
         {    '_id': '5a05dacc734d1d68d42d31f3',
@@ -57,4 +70,18 @@ export class ProductComponent {
     toggleImage(): void {
         this.showImage = !this.showImage;
     }
+
+    onDataRecive(message: string): void {
+        this.emitValue = message;
+    }
+
+    onUpdateInputValue(event: Event): void {
+        this.updatedValue = (<HTMLInputElement>event.target).value;
+    }
+
+    getColor() {
+        return this.serverStatus === 'Online' ? 'green' : 'red';
+    }
 }
+
+
