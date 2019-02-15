@@ -43,12 +43,12 @@ tsconfig: .ts=> .js
 
 package.json=> angular.json=> main.ts=> app.module.ts
 
-
+////
 
 module=> declarations             => NgModule
 Component=> html, css & logics    => Component
 Pipe=> run time data change       => Pipe, PipeTransform
-Service=> help to connect with 3rd party
+Service=> help to connect with 3rd party=> Injectable
 Routing
 
 
@@ -359,3 +359,7 @@ bind output value
 
 ///////
 Service
+dependency injection
+
+when class recive the instance of object from external source
+rather than creating itself

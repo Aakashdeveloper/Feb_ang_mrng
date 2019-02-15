@@ -8,6 +8,7 @@ import { MyUpperPipe } from './products/myUpper.pipe';
 import { DiscountPipe } from './products/discount.pipe';
 import { ProductSearch } from './products/product-filter.pipe';
 import { StarComponent } from './shared/star.component';
+import { ProductService } from './products/product.service';
 
 @NgModule({
     // all component & pipe
@@ -26,8 +27,10 @@ import { StarComponent } from './shared/star.component';
         FormsModule
     ],
 
-    // all th services
-    providers: [],
+    // all the services
+    providers: [
+        ProductService
+    ],
 
     // only main component
     bootstrap: [AppComponent ]

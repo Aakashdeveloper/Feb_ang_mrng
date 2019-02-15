@@ -9,8 +9,11 @@ import { Component, OnInit, OnChanges, OnDestroy,
 
 export class StarComponent implements OnInit, OnChanges, OnDestroy {
 
+    // @Input('starrate') rating: number;
+    // @Output('ratingClick') ratingClicked: EventEmitter<string> = new EventEmitter<string>();
     @Input() rating: number;
     @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
+
     starWidth: number;
 
     constructor() {
