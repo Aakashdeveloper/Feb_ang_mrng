@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './products/product.component';
@@ -24,7 +25,8 @@ import { ProductService } from './products/product.service';
     // all the module
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
 
     // all the services
