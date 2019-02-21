@@ -56,7 +56,9 @@
                                     />
                               </td>
                               <td >
-                                      {{prod.productName | myUpper:"upper"}}
+                                     <a [routerLink]="['/products', prod.productId]">
+                                              {{prod.productName | myUpper:"upper"}} 
+                                    </a>
                               </td>
                               <td>{{prod.productCode | myUpper:"lower"}}</td>
                               <td>{{prod.releaseDate | date | uppercase}}</td>
