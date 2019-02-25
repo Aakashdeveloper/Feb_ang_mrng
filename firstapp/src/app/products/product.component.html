@@ -56,7 +56,8 @@
                                     />
                               </td>
                               <td >
-                                     <a [routerLink]="['/products', prod.productId]">
+                                     <a [routerLink]="['/products', prod.productId]"
+                                     [queryParams]="{name:prod.productName,description:prod.description,img:prod.imageUrl}">
                                               {{prod.productName | myUpper:"upper"}} 
                                     </a>
                               </td>

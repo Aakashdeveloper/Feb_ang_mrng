@@ -1,8 +1,11 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-        Product Detail
+        Product Detail for {{id}}
     </div>
     <div class="panel-body">
-        Detail for page
+        <h2>Detail for page product <h1>{{name}}</h1></h2>
+        <img [src]="imageUrl" />
+        <h3>{{desc}}</h3>
+        <button class="btn btn-success" (click)="onBack()">Back</button>
     </div>
 </div>
