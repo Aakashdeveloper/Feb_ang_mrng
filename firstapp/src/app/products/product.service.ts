@@ -16,6 +16,10 @@ export class ProductService {
         return this._http.get<IProduct[]>(this._productUrl);
     }
 
+    getProductDetails(id): Observable<IProduct[]> {
+        return this._http.get<IProduct[]>(`${this._productUrl}?productId=${id}`);
+    }
+
 
 }
 

@@ -16,6 +16,7 @@ import { OrderComponent } from './orders/order.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/notfound.component';
 import { ProductDetailComponent } from './products/product-detail.component';
+import { RouterGaurds } from './products/router-gaurds.service';
 
 @NgModule({
     // all component & pipe
@@ -39,7 +40,7 @@ import { ProductDetailComponent } from './products/product-detail.component';
         HttpClientModule,
         RouterModule.forRoot([
             { path: 'products', component: ProductComponent},
-            { path: 'products/:id', component: ProductDetailComponent},
+            { path: 'products/:id', canActivate: [RouterGaurds], component: ProductDetailComponent},
             { path: 'orders', component: OrderComponent},
             { path: 'home', component: HomeComponent},
             { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -50,7 +51,8 @@ import { ProductDetailComponent } from './products/product-detail.component';
 
     // all the services
     providers: [
-        ProductService
+        ProductService,
+        RouterGaurds
     ],
 
     // only main component

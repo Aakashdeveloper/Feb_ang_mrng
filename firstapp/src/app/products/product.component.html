@@ -56,8 +56,7 @@
                                     />
                               </td>
                               <td >
-                                     <a [routerLink]="['/products', prod.productId]"
-                                     [queryParams]="{name:prod.productName,description:prod.description,img:prod.imageUrl}">
+                                     <a [routerLink]="['/products', prod.productId]">
                                               {{prod.productName | myUpper:"upper"}} 
                                     </a>
                               </td>
@@ -80,3 +79,5 @@
                 </ng-template>
         </div>
 </div>
+
+<!--[queryParams]="{name:prod.productName,description:prod.description,img:prod.imageUrl}"-->

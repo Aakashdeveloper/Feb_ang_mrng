@@ -3,9 +3,9 @@
         Product Detail for {{id}}
     </div>
     <div class="panel-body">
-        <h2>Detail for page product <h1>{{name}}</h1></h2>
-        <img [src]="imageUrl" />
-        <h3>{{desc}}</h3>
+        <h2>Detail for page product <h1>{{details[0].productName}}</h1></h2>
+        <img [src]="details[0].imageUrl" />
+        <h3>{{details[0].description}}</h3>
         <button class="btn btn-success" (click)="onBack()">Back</button>
     </div>
 </div>
