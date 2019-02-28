@@ -2,14 +2,14 @@ import {NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { ProductModule } from './products/product.module';
 
 import { AppComponent } from './app.component';
-import { StarComponent } from './shared/star.component';
 import { OrderComponent } from './orders/order.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/notfound.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
     // all component & pipe
@@ -17,7 +17,8 @@ import { NotFoundComponent } from './shared/notfound.component';
         AppComponent,
         OrderComponent,
         HomeComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        MoviesComponent
     ],
 
     // all the module
@@ -25,13 +26,8 @@ import { NotFoundComponent } from './shared/notfound.component';
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        RouterModule.forRoot([
-            { path: 'orders', component: OrderComponent},
-            { path: 'home', component: HomeComponent},
-            { path: '', redirectTo: 'home', pathMatch: 'full'},
-            { path: '**', component: NotFoundComponent}
-        ]),
-        ProductModule
+        ProductModule,
+        AppRoutingModule
     ],
     // all the services
     providers: [],

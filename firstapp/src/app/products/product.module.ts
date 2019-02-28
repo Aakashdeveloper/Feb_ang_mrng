@@ -1,6 +1,6 @@
 import { NgModule} from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 import { ProductComponent } from './product.component';
 import { MyUpperPipe } from './myUpper.pipe';
@@ -11,13 +11,11 @@ import { ProductService } from './product.service';
 import { RouterGaurds } from './router-gaurds.service';
 
 
+
 @NgModule({
     imports: [
         SharedModule,
-        RouterModule.forChild([
-            { path: 'products', component: ProductComponent},
-            { path: 'products/:id', canActivate: [RouterGaurds], component: ProductDetailComponent},
-        ])
+        AppRoutingModule
     ],
     declarations: [
         ProductComponent,
@@ -33,3 +31,4 @@ import { RouterGaurds } from './router-gaurds.service';
 })
 
 export class ProductModule {}
+
