@@ -15,7 +15,8 @@ import { ProductService } from './product.service';
         `.online{
             background-color:wheat
         }`
-    ]
+    ],
+    providers: []
 })
 
 export class ProductComponent implements OnInit {
@@ -49,6 +50,7 @@ export class ProductComponent implements OnInit {
     getColor() {
         return this.serverStatus === 'Online' ? 'green' : 'red';
     }
+
 
     ngOnInit(): void {
         this._productService.getProducts()
