@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerFormComponent implements OnInit {
 
+  languages: any[] = ['AngularJs', 'NodeJs', 'Python'];
   constructor() { }
 
   ngOnInit() {
