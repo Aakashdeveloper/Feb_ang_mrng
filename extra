@@ -380,3 +380,19 @@ ng g m
 
 
 npm install bootstrap@3
+
+
+var a = "john"
+undefined
+a.charAt(0)
+"j"
+a.charAt(0).toUpperCase()
+"J"
+a.slice(1)
+"ohn"
+a.slice(2)
+"hn"
+a.slice(1)
+"ohn"
+a.charAt(0).toUpperCase()+a.slice(1)
+"John"
