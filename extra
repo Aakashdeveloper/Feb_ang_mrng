@@ -396,3 +396,8 @@ a.slice(1)
 "ohn"
 a.charAt(0).toUpperCase()+a.slice(1)
 "John"
+
+
+
+ng-pristine  ng-untouched   ng-valid
+ng-dirty     ng-touched     ng-invalid

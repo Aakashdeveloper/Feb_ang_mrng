@@ -9,7 +9,7 @@ import { Employee } from '../models/employee.model';
 export class CustomerFormComponent implements OnInit {
 
   languages: any[] = ['AngularJs', 'NodeJs', 'Python'];
-  model = new Employee('John', 'Andy', true, 'male', 'NodeJs');
+  model = new Employee('John', 'Andy', '', true, 'male', 'NodeJs');
 
   firstToUpper(value: string) {
     if (value.length > 0) {
