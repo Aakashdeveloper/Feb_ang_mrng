@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/notfound.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MoviesComponent } from './movies/movies.component';
+import { MusicComponent } from './music/music.component';
 
 @NgModule({
     // all component & pipe
@@ -18,7 +19,8 @@ import { MoviesComponent } from './movies/movies.component';
         OrderComponent,
         HomeComponent,
         NotFoundComponent,
-        MoviesComponent
+        MoviesComponent,
+        MusicComponent
     ],
 
     // all the module

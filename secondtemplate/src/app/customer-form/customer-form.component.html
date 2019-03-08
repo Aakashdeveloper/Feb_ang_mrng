@@ -3,7 +3,7 @@
     Customer Forms
   </div>
   <div class="panel-body">
-    <form>
+    <form #form="ngForm" (submit)="formSubmit(form)">
       <div class="form-group" [class.has-error]="FirstName.invalid">
           <label class="control-label"
                 for="firstName">FirstName</label>
@@ -49,6 +49,21 @@
                 Min Length should be 8
               </div>
     </div>
+      <div class="form-group" [class.has-error]="email.invalid && email.touched">
+        <label class="control-label"
+            for="email">Email</label>
+        <input type="email" 
+              class="form-control"
+              id="email"
+              name="email"
+              [(ngModel)]="model.email"
+              pattern="^([a-zA-Z0-9\.\-]+)@([a-zA-Z0-9\.\-]+)\.([a-zA-Z]{2,5})$"
+              #email="ngModel"
+              placeholder="email"/>
+              <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
+                Please enter valid email
+              </div>
+        </div>
       <div class="checkbox">
         <label>
           <input type="checkbox"
@@ -73,18 +88,24 @@
                     name="gender"/>Male
             </label>
       </div>
-      <div class="form-group">
+      <div class="form-group" [class.has-error]="hasCodeLangError">
         <label>Code Lang</label>
         <select class="form-control"
             name="codelang"
-            [(ngModel)]="model.codelang">
+            [(ngModel)]="model.codelang"
+            (blur)="validateCodeLang($event)">
+            <option value="default">Please select lang</option>
             <option *ngFor="let lang of languages">
               {{lang}}
             </option>
         </select>
+          <div class="alert alert-danger" *ngIf="hasCodeLangError">
+            Please enter valid email
+          </div>
 
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success"
+      [disabled]="hasCodeLangError">Submit</button>
       &nbsp;
       <input type="reset" class="btn btn-danger"/>
     </form>
