@@ -1,0 +1,63 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        Employee Form
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal"
+              (ngSubmit)="save()"
+              [formGroup]="employeeForm">
+                <div  class="form-group">
+                    <label class="col-md-2" for="fname">FirstName</label>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                                type="text"
+                                id="fname"
+                                placeholder="enter First Name"
+                                formControlName="firstName"/>
+                    </div>
+                </div>
+                <div  class="form-group">
+                        <label class="col-md-2" for="lname">LastName</label>
+                        <div class="col-md-8">
+                            <input class="form-control"
+                                    type="text"
+                                    id="lname"
+                                    placeholder="enter Last Name"
+                                    formControlName="lastName"/>
+                        </div>
+                </div>
+                <div  class="form-group">
+                    <label class="col-md-2" for="email">Email</label>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                                type="text"
+                                id="email"
+                                placeholder="enter Email"
+                                formControlName="email"/>
+                </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-2">
+                        <span>
+                            <button type="submit"
+                                    class="btn btn-success">
+                                    Submit
+                            </button>   
+                        </span> &nbsp;
+                        <span>
+                            <button type="button"
+                                    class="btn btn-primary">
+                                    Test Data
+                            </button>   
+                        </span>&nbsp;
+                        <span>
+                            <button type="reset"
+                                    class="btn btn-danger">
+                                    Reset
+                            </button>   
+                        </span>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
