@@ -75,11 +75,69 @@
                     </span>
                 </div>
                 </div>
+                <div  class="form-group" [ngClass]="{'has-error':(employeeForm.get('phone').touched ||
+                                                                  employeeForm.get('phone').dirty) &&
+                                                                  !employeeForm.get('phone').valid}">
+                <label class="col-md-2 control-label" for="phone">Phone</label>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                        type="text"
+                        id="phone"
+                        placeholder="enter phone"
+                        formControlName="phone"/>
+                            <span class="help-block" *ngIf="(employeeForm.get('phone').touched ||
+                                                            (employeeForm.get('phone').dirty) &&
+                                                            (employeeForm.get('phone').errors))">
+                                <span *ngIf="employeeForm.get('phone').errors.required">
+                                Please enter Phone number
+                                </span>
+                            </span>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Send Notification</label>
+                    <div class="col-md-8">
+                        <label class="radio-inline">
+                            <input type="radio" value="phone"
+                                formControlName="notification"
+                                (click)="setNotification('phone')"/>Phone
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="email"
+                                formControlName="notification"
+                                (click)="setNotification('email')"/>Email
+                        </label>
+                    </div>
+                </div>
+                <div  class="form-group" [ngClass]="{'has-error':(employeeForm.get('rating').touched ||
+                                                                  employeeForm.get('rating').dirty) &&
+                                                                  !employeeForm.get('rating').valid}">
+                <label class="col-md-2 control-label" for="rating">Rating</label>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                        type="text"
+                        id="rating"
+                        placeholder="enter rating"
+                        formControlName="rating"/>
+                            <span class="help-block" *ngIf="(employeeForm.get('rating').touched ||
+                                                            (employeeForm.get('rating').dirty) &&
+                                                            (employeeForm.get('rating').errors))">
+                                <span *ngIf="employeeForm.get('rating').errors.required">
+                                Please enter rating
+                                </span>
+                                <span *ngIf="employeeForm.get('rating').errors.range">
+                                Enter rating between 1 to 5
+                                </span>
+
+                            </span>
+                        </div>
+                    </div>
                 <div class="form-group">
                     <div class="col-md-4 col-md-offset-2">
                         <span>
                             <button type="submit"
-                                    class="btn btn-success">
+                                    class="btn btn-success"
+                                    [disabled]="!employeeForm.valid">
                                     Submit
                             </button>   
                         </span> &nbsp;
