@@ -12,6 +12,18 @@ function ratingRange(min: Number, max: Number) {
             };
 }
 
+function emailMatcher(c: AbstractControl) {
+    const emailControl = c.get('email');
+    const confirmControl = c.get('confirmEmail');
+    if (emailControl.pristine || confirmControl.pristine) {
+        return null;
+    }
+    if (emailControl.value === confirmControl.value) {
+        return null;
+    }
+    return {'match': true};
+}
+
 @Component({
     selector: 'app-reactive',
     templateUrl: './employee.component.html'
@@ -30,7 +42,11 @@ export class EmployeeFormComponent implements OnInit {
         this.employeeForm = this.fb.group({
             firstName: ['', [Validators.required, Validators.minLength(3)]],
             lastName: ['', [Validators.required, Validators.maxLength(5)]],
-            email: ['', [Validators.required, Validators.pattern('[0-9a-zA-Z]+@[a-zA-Z0-9]+')]],
+            // email: ['', [Validators.required, Validators.pattern('[0-9a-zA-Z]+@[a-zA-Z0-9]+')]],
+            emailGroup: this.fb.group({
+                email: ['', [Validators.required, Validators.pattern('[0-9a-zA-Z]+@[a-zA-Z0-9]+')]],
+                confirmEmail: ['', Validators.required ]
+            }, {validator: emailMatcher}),
             rating: ['', [Validators.required, ratingRange(1, 5)]],
             phone: [''],
             notification: []

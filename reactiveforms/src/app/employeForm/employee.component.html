@@ -52,6 +52,55 @@
                         </span>
                         </div>
                 </div>
+            <div formGroupName="emailGroup"
+                [ngClass]="{'has-error':employeeForm.get('emailGroup').errors}">
+                <div  class="form-group" [ngClass]="{'has-error':(employeeForm.get('emailGroup.email').touched ||
+                                                                 employeeForm.get('emailGroup.email').dirty) &&
+                                                                 !employeeForm.get('emailGroup.email').valid}">
+                    <label class="col-md-2 control-label" for="email">Email</label>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                                type="text"
+                                id="email"
+                                placeholder="enter Email"
+                                formControlName="email"/>
+                    <span class="help-block" *ngIf="(employeeForm.get('emailGroup.email').touched ||
+                                                    (employeeForm.get('emailGroup.email').dirty) &&
+                                                    (employeeForm.get('emailGroup.email').errors))">
+                        <span *ngIf="employeeForm.get('emailGroup.email').errors.required">
+                            Please enter email
+                        </span>
+                        <span *ngIf="employeeForm.get('emailGroup.email').errors.pattern">
+                           Please enter valid email
+                        </span>
+
+                    </span>
+                </div>
+                </div>
+                <div  class="form-group" [ngClass]="{'has-error':(employeeForm.get('emailGroup.confirmEmail').touched ||
+                                                                 employeeForm.get('emailGroup.confirmEmail').dirty) &&
+                                                                 !employeeForm.get('emailGroup.confirmEmail').valid}">
+                    <label class="col-md-2 control-label" for="confirmemail">Confirm Email</label>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                                type="text"
+                                id="confirmemail"
+                                placeholder="enter confirm  Email"
+                                formControlName="confirmEmail"/>
+                    <span class="help-block" *ngIf="(employeeForm.get('emailGroup.confirmEmail').touched ||
+                                                    (employeeForm.get('emailGroup.confirmEmail').dirty) &&
+                                                    (employeeForm.get('emailGroup.confirmEmail').errors))">
+                        <span *ngIf="employeeForm.get('emailGroup.confirmEmail').errors.required">
+                            Please enter email
+                        </span>
+                        <span *ngIf="employeeForm.get('emailGroup.confirmEmail').errors.match">
+                            Email doesnt match
+                        </span>
+                    </span>
+                </div>
+                </div>
+            </div>
+<!---------------------------------------------------------------
                 <div  class="form-group" [ngClass]="{'has-error':(employeeForm.get('email').touched ||
                                                                  employeeForm.get('email').dirty) &&
                                                                  !employeeForm.get('email').valid}">
@@ -75,6 +124,7 @@
                     </span>
                 </div>
                 </div>
+-------------------------------------------------------------------->
                 <div  class="form-group" [ngClass]="{'has-error':(employeeForm.get('phone').touched ||
                                                                   employeeForm.get('phone').dirty) &&
                                                                   !employeeForm.get('phone').valid}">
